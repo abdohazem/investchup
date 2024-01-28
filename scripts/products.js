@@ -7,7 +7,7 @@ const categories = document.querySelectorAll(".content ul li");
 async function getData() {
   try {
     loading(true);
-    const get = await fetch(`../products.json`);
+    const get = await fetch(`products.json`);
     const data = await get.json();
     products = data[cate];
     console.log(products);
