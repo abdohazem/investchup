@@ -4,9 +4,10 @@ async function getData() {
   try {
     loading(true);
     const productId = localStorage.getItem("productId");
-    const get = await fetch("products.json");
+    const cate = localStorage.getItem("cate");
+    const get = await fetch("../products.json");
     const data = await get.json();
-    product = data[productId - 1];
+    product = data[cate][productId - 1];
     createProduct(
       product.title,
       product.description,

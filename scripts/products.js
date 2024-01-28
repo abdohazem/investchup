@@ -1,10 +1,16 @@
 let products = [];
+let cate = "s.b";
+let currentId = "s.b";
+
+const categories = document.querySelectorAll(".content ul li");
+
 async function getData() {
   try {
     loading(true);
-    const get = await fetch("products.json");
+    const get = await fetch(`../products.json`);
     const data = await get.json();
-    products = data;
+    products = data[cate];
+    console.log(products);
     products.forEach((el) => {
       createProduct(el.title, el.currancy, el.price, el.image, el.id);
     });
@@ -16,6 +22,27 @@ async function getData() {
 }
 getData();
 
+function checkSelectedLi() {
+  categories.forEach((el) => {
+    if (el.id === currentId) {
+      el.classList.add("selected");
+    } else {
+      el.classList.remove("selected");
+    }
+  });
+}
+checkSelectedLi();
+
+categories.forEach((el) => {
+  el.addEventListener("click", function () {
+    removeProducts();
+    cate = el.id;
+    getData();
+    currentId = el.id;
+    checkSelectedLi();
+  });
+});
+
 function loading(isLoading) {
   const loading = document.querySelector(".loading");
   const content = document.querySelector(".content");
@@ -25,6 +52,11 @@ function loading(isLoading) {
     loading.classList.add("hide");
     content.classList.toggle("hide");
   }
+}
+
+function removeProducts() {
+  const productsList = document.querySelectorAll(".products-list a");
+  productsList.forEach((el) => el.remove());
 }
 
 function createProduct(title, currancy, price, image, id) {
@@ -51,6 +83,7 @@ function createProduct(title, currancy, price, image, id) {
 
   productDiv.addEventListener("click", function () {
     localStorage.setItem("productId", productDiv.id);
+    localStorage.setItem("cate", cate);
     console.log("her");
   });
 }

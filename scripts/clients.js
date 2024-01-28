@@ -40,7 +40,6 @@ function checkSpan() {
     } else {
       el.classList.remove("selected");
     }
-    console.log(el.id);
   });
 }
 checkSpan();
