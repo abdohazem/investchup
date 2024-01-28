@@ -2,7 +2,7 @@ let products = [];
 async function getData() {
   try {
     loading(true);
-    const get = await fetch("../products.json");
+    const get = await fetch("products.json");
     const data = await get.json();
     products = data;
     products.forEach((el) => {
