@@ -4,7 +4,7 @@ async function getData() {
   try {
     loading(true);
     const productId = localStorage.getItem("productId");
-    const get = await fetch("../products.json");
+    const get = await fetch("products.json");
     const data = await get.json();
     product = data[productId - 1];
     createProduct(
