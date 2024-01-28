@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "../source/photos/product.png",
+    "title": "john deere 1 R",
+    "description": "lan tractor imported by investch",
+    "price": "197,600",
+    "currancy": "EGP"
+  },
+  {
+    "id": 2,
+    "image": "../source/photos/product.png",
+    "title": "john deere 2 R",
+    "description": "lan tractor imported by investch",
+    "price": "197,600",
+    "currancy": "EGP"
+  },
+  {
+    "id": 3,
+    "image": "../source/photos/product.png",
+    "title": "john deere 3 R",
+    "description": "lan tractor imported by investch",
+    "price": "197,600",
+    "currancy": "EGP"
+  },
+  {
+    "id": 4,
+    "image": "../source/photos/product.png",
+    "title": "john deere 4 R",
+    "description": "lan tractor imported by investch",
+    "price": "197,600",
+    "currancy": "EGP"
+  },
+  {
+    "id": 5,
+    "image": "../source/photos/product.png",
+    "title": "john deere 5 R",
+    "description": "lan tractor imported by investch",
+    "price": "197,600",
+    "currancy": "EGP"
+  },
+  {
+    "id": 6,
+    "image": "../source/photos/product.png",
+    "title": "john deere 6 R",
+    "description": "lan tractor imported by investch",
+    "price": "197,600",
+    "currancy": "EGP"
+  }
+]
